@@ -1,0 +1,149 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #b3e5fc 0%, #e1f5fe 100%);
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: oceanFlow 10s ease-in-out infinite alternate;
+}
+
+@keyframes oceanFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.player-info {
+  background: #ffffff80;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 200px;
+}
+
+.player-info h2 {
+  color: #01579b;
+  margin-bottom: 5px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-group label {
+  color: #0277bd;
+  font-weight: 500;
+}
+
+.input-group input {
+  padding: 8px;
+  border: 2px solid #4fc3f7;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #0288d1;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #01579b;
+  margin-bottom: 10px;
+}
+
+.status {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #0277bd;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 110px);
+  grid-gap: 10px;
+}
+
+.square {
+  background: #ffffffaa;
+  border: 3px solid #0288d1;
+  border-radius: 15px;
+  width: 110px;
+  height: 110px;
+  font-size: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.square:hover {
+  background: #b3e5fc;
+  transform: scale(1.05);
+}
+
+.board-row {
+  display: contents;
+}
+
+.game-info {
+  background: #ffffff80;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-info h2 {
+  margin-top: 0;
+  color: #01579b;
+}
+
+.game-info button {
+  background: #4fc3f7;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.game-info button:hover {
+  background: #0288d1;
+  transform: scale(1.05);
+}
+
+.game-info button:disabled {
+  background: #b3e5fc;
+  cursor: not-allowed;
+}
